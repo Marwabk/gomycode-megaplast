@@ -1,6 +1,10 @@
 import React from 'react'
-import './Menu.css'
+import { Router, Link } from "@reach/router";
+
 import Navbar from '../Navbar/navbar'
+
+import './Menu.css'
+
 const Menu =(props)=>{
     const fonts=props.menu.fonts
     const imgUrl=props.menu.imgUrl
