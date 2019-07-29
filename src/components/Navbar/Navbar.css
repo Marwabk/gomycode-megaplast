@@ -1,0 +1,69 @@
+.fixed-menu{
+    position: fixed;
+    display:flex;
+    justify-content: flex-end;
+    z-index: 9999;
+    background-color: black; 
+    width:100%;
+    padding-right: 1%
+  }
+  .fonts{
+    position: relative;
+    display:flex;
+    margin:1%;
+  }
+  .fonts .fas{
+    margin:1%;
+    color:wheat;
+  }
+  .fas:hover {
+    cursor: pointer;
+    color:rgb(165, 157, 157);
+  }
+  .fa-shopping-cart{
+    position: relative;
+    display:flex;
+    margin-right: 2%
+  }
+  .qty{
+    display:flex;
+    position: absolute;
+    background-color: wheat;
+    color:black;
+    border-radius:8px;
+    font-size:12px;
+    justify-content: center;
+    width:70%;
+    margin: -30% 70%;
+  }
+  .qty:hover{
+    background-color:rgb(165, 157, 157);
+  }
+  .comment{
+    visibility: hidden;
+    position: absolute;
+    z-index: 9999;
+    width:70px;
+    background-color:white;
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    border-color: rgb(68, 65, 65);
+    text-align: center;
+    padding: 5px 0px ;
+    top: 120%;
+    left:-100%
+    
+  }
+  
+  .fonts:hover .comment {
+    visibility: visible;
+  }
+  .flag{
+    width: 1%;
+    height: 1%;
+    margin:1% 0%;
+    
+  }
+  .flag:hover{
+    cursor: pointer;
+  }

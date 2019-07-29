@@ -1,0 +1,42 @@
+
+.new-feed{
+    display:flex;
+    justify-content: space-between;
+    background: #efefec;
+  }
+  .new-feed-text{
+    display:flex;
+    
+  }
+  .new-feed-text span{
+    background: #424242;
+      padding: 1px 60px 0 20px;
+      display: inline-block;
+      position: relative;
+      color:white;
+  }
+  .new-feed-text p{
+    margin: 1px 
+  }
+  span:before {
+    border-right: 17px solid #EFEFEC;
+    border-top: 20px solid transparent;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    right: 0;
+    position: absolute;
+  }
+  span:after {
+    border-bottom: 20px solid transparent;
+    border-right: 17px solid #EFEFEC;
+    content: "";
+    display: inline-block;
+    right: 0;                                 
+    position: absolute;
+    top: 0;
+  }
+  .prev, .next{
+    margin: 1px 10px;
+  }
+  

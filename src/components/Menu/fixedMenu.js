@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from './navbar'
+import './Menu.css'
+import Navbar from '../Navbar/navbar'
 const Menu =(props)=>{
     const fonts=props.menu.fonts
     const imgUrl=props.menu.imgUrl
