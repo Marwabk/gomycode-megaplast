@@ -1,4 +1,6 @@
 import React from 'react';
+import {  Link } from "@reach/router";
+
 import './Navbar.css'
 
 const Navbar=(props)=>{
@@ -7,10 +9,10 @@ const Navbar=(props)=>{
       <img className="logo" src="https://scontent.ftun10-1.fna.fbcdn.net/v/t1.15752-9/67404251_654119968331769_1807425944437129216_n.png?_nc_cat=103&_nc_oc=AQksTkT5BERJCrcz27UtF9bV_tzVpfDUXhsSg4o_QhdE7mSTt5MmyhHVpcwCSSulpHY&_nc_ht=scontent.ftun10-1.fna&oh=48ae1ff86fda62b3f1d69101aec1c9bf&oe=5DECEA4E&dl=1" />
       <ul>
   {navBar.map((el,i)=><li key={i}>
-                   <a href="#"><i className={el.class}></i>{el.title}</a>
+                   <Link to={el.link?el.link:''}><i className={el.class}></i>{el.title}</Link>
                    
         {el.subMenu && (
-                   <ul >{el.subMenu.map(element => <li className="sub-menu"><a href="#" >{element}</a></li>)}</ul>
+                   <ul >{el.subMenu.map(element => <li className="sub-menu"> <Link to="#">{element} </Link></li>)}</ul>
                )}
            
      </li>)} 
