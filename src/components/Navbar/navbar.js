@@ -12,7 +12,7 @@ const Navbar=(props)=>{
                    <Link to={el.link?el.link:''}><i className={el.class}></i>{el.title}</Link>
                    
         {el.subMenu && (
-                   <ul >{el.subMenu.map(element => <li className="sub-menu"> <Link to="#">{element} </Link></li>)}</ul>
+                   <ul >{el.subMenu.map(element => <li className="sub-menu"> <Link to={element.link}>{element.title} </Link></li>)}</ul>
                )}
            
      </li>)} 
