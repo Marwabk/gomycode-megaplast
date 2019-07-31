@@ -1,0 +1,21 @@
+.navbar-item{
+    /* width:200px; */
+    color: rgba(255,255,255,.5);
+    font-size:16px;
+}
+ul.navbar-nav .mr-auto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+a.dropdown-toggle.nav-link{
+    padding:0px;
+    margin-left:30px;
+}
+a.navbar-item{
+    margin-left:30px;
+}
+.fa-shopping-cart:before, .fa-sign-out-alt:before {
+    color: rgba(255,255,255,.5);
+    margin-left:20px;
+}
