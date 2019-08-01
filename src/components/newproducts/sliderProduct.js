@@ -26,7 +26,7 @@ export default class MultipleItems extends Component {
       <div className='slider-products'>
         <Link to={path} className="new-article"> {titre} </Link>
         <Slider {...settings}>
-         {articles.map(el=><Link to ='/description'><ItemCard tit={el.title} img={el.imgUrl} price={el.price} /></Link>) }
+         {articles.map(el=><Link to ={el.link}><ItemCard tit={el.title} img={el.imgUrl} price={el.price} /></Link>) }
          
         </Slider>
       </div>

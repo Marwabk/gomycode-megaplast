@@ -3,7 +3,7 @@ import './ProductDetail.css'
 
 
 
-function ProductDetail(){
+function ProductDetail(props){
     return <div class="container">
 		<div class="card">
 			<div class="container-fliud">
@@ -11,7 +11,7 @@ function ProductDetail(){
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane active" id="pic-1"><img src={props.img} /></div>
 						  {/* <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
@@ -27,7 +27,7 @@ function ProductDetail(){
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">men's shoes fashion</h3>
+						<h3 class="product-title">{props.tit}</h3>
 						{/* <div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -38,9 +38,9 @@ function ProductDetail(){
 							</div>
 							<span class="review-no">41 reviews</span>
 						</div> */}
-						<p class="product-description"> Pas de description disponible pour le moment</p>
-						<h4 class="price">current price: <span>180 Dt</span></h4>
-						<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+						<p class="product-description"> {props.refs}</p>
+						<h4 class="price">Prix actuel: <span>{props.price} Dt</span></h4>
+						{/* <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> */}
 						{/* <h5 class="sizes">sizes:
 							<span class="size" data-toggle="tooltip" title="small">s</span>
 							<span class="size" data-toggle="tooltip" title="medium">m</span>

@@ -14,8 +14,11 @@ import NavbarPage from '../components/navbarPage/navbarPage'
 import SingIn from '../pages/SignIn'
 import SignUp from '../pages/SignUp'
 import Checkout from '../components/shoppingCard/Checkout'
-import Description from '../components/description/ProductDetail'
+import DescriptionCuisine from '../pages/desCuisine'
+import DescriptionJardin from '../pages/desJardin'
+import DescriptionSalon from '../pages/desSalon'
 import {articlesDeCuisine,articlesDeJardin,salonDeThe} from '../helpers'
+import ContactPage from '../pages/ContactPage'
 
 
 function App() {
@@ -34,7 +37,10 @@ function App() {
       <CatCuisine path="/cuisine" />
       <CatJardin path="/jardin" />
       <CatSalon path="/salon" />
-      <Description path="/description"/>
+      {articlesDeCuisine.map(el=><DescriptionCuisine path={el.link} refs={el.ref}/>)}
+      {articlesDeJardin.map(el=><DescriptionJardin path={el.link} refs={el.ref}/>)}
+      {salonDeThe.map(el=><DescriptionSalon path={el.link} refs={el.ref}/>)}
+      <ContactPage path="/contact"/>
     </Router>
     </div>
   </Provider>
