@@ -47,3 +47,7 @@ export const salonDeThe=[{imgUrl:'http://www.sotufab-plast.tn/image/data/produit
 {imgUrl:'',title:'',ref:'',price:'',link:'/'},
 {imgUrl:'',title:'',ref:'',price:'',link:'/'},
 {imgUrl:'',title:'',ref:'',price:'',link:'/'}]
+ export const  arr=[{articles:articlesDeCuisine,path:'/cuisine',titre:"Articles de cuisine"},
+ {articles:articlesDeJardin,path:'/jardin',titre:"Articles de jardin"},
+ {articles:salonDeThe,path:'/salon',titre:'Salon de thé'}]
+ export const tousLesArticles=[articlesDeCuisine,articlesDeJardin,salonDeThe]

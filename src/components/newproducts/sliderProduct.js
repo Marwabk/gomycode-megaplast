@@ -19,16 +19,15 @@ export default class MultipleItems extends Component {
       slidesToScroll: 3
     };
     
-    const articles=this.props.articles.slice(0,6)
-    const titre=this.props.title
-    const path=this.props.path
+    const {articles, title, path}=this.props
+
     return (
       <div className='slider-products'>
-        <Link to={path} className="new-article"> {titre} </Link>
-        <Slider {...settings}>
+        <Link to={path} className="new-article"> {title} </Link>
+        {articles.length===6?<Slider {...settings}>
          {articles.map(el=><ItemCard el={el} />) }
          
-        </Slider>
+        </Slider>:articles.map(el=><ItemCard el={el} />) }
       </div>
     );
   }

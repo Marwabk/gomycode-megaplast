@@ -2,20 +2,14 @@ import React from 'react';
 import { Router } from "@reach/router";
 import { Provider } from "react-redux"
 
-// import Menu from '../components/Menu/fixedMenu';
-// import {menu,navBar} from '../helpers'
 import Home from '../pages/home'
-import CatCuisine from '../pages/CatCuisine';
-import CatJardin from '../pages/CatJardin';
-import CatSalon from '../pages/CatSalon';
 import NavbarPage from '../components/navbarPage/navbarPage'
 import SingIn from '../pages/SignIn'
 import SignUp from '../pages/SignUp'
 import Checkout from '../components/shoppingCard/Checkout'
-import DescriptionCuisine from '../pages/desCuisine'
 import DescriptionJardin from '../pages/desJardin'
-import DescriptionSalon from '../pages/desSalon'
-import { articlesDeCuisine, articlesDeJardin, salonDeThe } from '../helpers'
+import MultipleItems from '../components/newproducts/sliderProduct'
+import { articlesDeCuisine, articlesDeJardin, salonDeThe ,arr,tousLesArticles} from '../helpers'
 import ContactPage from '../pages/ContactPage'
 import store from '../store'
 
@@ -24,19 +18,16 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        {/* <Menu menu={menu} navBar={navBar} /> */}
         <NavbarPage />
         <Router>
           <Home path="/" />
           <SingIn path="/signIn" />
           <SignUp path='/register' />
           <Checkout path='/checkout' />
-          <CatCuisine path="/cuisine" />
-          <CatJardin path="/jardin" />
-          <CatSalon path="/salon" />
-          {articlesDeCuisine.map(el => <DescriptionCuisine path={el.link} refs={el.ref} />)}
-          {articlesDeJardin.map(el => <DescriptionJardin path={el.link} refs={el.ref} />)}
-          {salonDeThe.map(el => <DescriptionSalon path={el.link} refs={el.ref} />)}
+          {arr.map(el=><MultipleItems articles={el.articles}  path={el.path}/>)}  
+          {articlesDeCuisine.map(el => <DescriptionJardin path={el.link} article={el} />)}
+          {articlesDeJardin.map(el =>  <DescriptionJardin path={el.link} article={el} />)}
+          {salonDeThe.map(el => <DescriptionJardin path={el.link} article={el} />)}
           <ContactPage path="/contact" />
         </Router>
       </div>

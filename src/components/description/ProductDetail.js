@@ -5,15 +5,20 @@ import './ProductDetail.css'
 
 
 
-function ProductDetail({el, addItem}) {
-	return <div class="container">
+class ProductDetail extends React.Component {
+	state = {
+		quantity: 0
+	} 
+	render() {
+		const {el, addItem, article} = this.props;
+		return <div class="container">
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 
 						<div class="preview-pic tab-content">
-							<div class="tab-pane active" id="pic-1"><img src={el.imgUrl} /></div>
+							<div class="tab-pane active" id="pic-1"><img src={article.imgUrl} /></div>
 							{/* <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
@@ -29,7 +34,7 @@ function ProductDetail({el, addItem}) {
 
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">{el.title}</h3>
+						<h3 class="product-title">{article.title}</h3>
 						{/* <div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -40,8 +45,8 @@ function ProductDetail({el, addItem}) {
 							</div>
 							<span class="review-no">41 reviews</span>
 						</div> */}
-						<p class="product-description"> {el.refs}</p>
-						<h4 class="price">Prix actuel: <span>{el.price} Dt</span></h4>
+						<p class="product-description"> {article.refs}</p>
+						<h4 class="price">Prix actuel: <span>{article.price} Dt</span></h4>
 						{/* <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> */}
 						{/* <h5 class="sizes">sizes:
 							<span class="size" data-toggle="tooltip" title="small">s</span>
@@ -55,15 +60,21 @@ function ProductDetail({el, addItem}) {
 							<span class="color blue"></span>
 						</h5> */}
 						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button" onClick={()=>addItem(el)}>add to cart</button>
+							<button class="add-to-cart btn btn-default" type="button" onClick={()=>addItem({article, quantity:this.state.quantity})}>add to cart</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+							<input onChange={(event) => this.setState({ quantity: event.target.value})} type="text"></input>
 						</div>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	}
 }
+// () {
+
+// }
 
 const mapDispatchToProps = dispatch => ({
 	addItem: (payload) => dispatch(addItem(payload))
