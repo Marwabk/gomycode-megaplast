@@ -1,4 +1,3 @@
-import React from "react"
 import {articlesDeCuisine,articlesDeJardin,salonDeThe} from '../helpers'
 
 const initState={
@@ -11,6 +10,4 @@ export default function cartReducer(state = initState, action) {
     switch (action.type) {
         default: return state
     }
-
-
 }

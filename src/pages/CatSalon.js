@@ -7,7 +7,7 @@ import { Router,Link } from "@reach/router";
 
 function CatSalon(props){
 
-       const it=props.item.map(el=><Link to={el.link}><ItemCard tit={el.title} img={el.imgUrl} price={el.price}/></Link>)
+       const it=props.item.map(el=><ItemCard el = {el}/>)
 
         return(<div className="cat-salon" style={{margin:'0px 100px 0px 100px'}}>
             {it}
@@ -17,7 +17,7 @@ function CatSalon(props){
 }
 
 const mapStateToProps = (state)=>({
-    item: state.salon
+    item: state.cartReducer.salon
 })
 
 export default connect(mapStateToProps)(CatSalon)

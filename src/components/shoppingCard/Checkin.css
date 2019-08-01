@@ -1,0 +1,8 @@
+.buy-item{
+    display:flex;
+    justify-content: space-between;
+}
+.buy-item img{
+    width:80px;
+   
+}

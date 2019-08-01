@@ -1,18 +1,20 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { addItem } from '../../actions'
 import './ProductDetail.css'
 
 
 
-function ProductDetail(props){
-    return <div class="container">
+function ProductDetail({el, addItem}) {
+	return <div class="container">
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-						
+
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src={props.img} /></div>
-						  {/* <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
+							<div class="tab-pane active" id="pic-1"><img src={el.imgUrl} /></div>
+							{/* <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> */}
@@ -24,10 +26,10 @@ function ProductDetail(props){
 						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
 						</ul> */}
-						
+
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">{props.tit}</h3>
+						<h3 class="product-title">{el.title}</h3>
 						{/* <div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -38,8 +40,8 @@ function ProductDetail(props){
 							</div>
 							<span class="review-no">41 reviews</span>
 						</div> */}
-						<p class="product-description"> {props.refs}</p>
-						<h4 class="price">Prix actuel: <span>{props.price} Dt</span></h4>
+						<p class="product-description"> {el.refs}</p>
+						<h4 class="price">Prix actuel: <span>{el.price} Dt</span></h4>
 						{/* <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p> */}
 						{/* <h5 class="sizes">sizes:
 							<span class="size" data-toggle="tooltip" title="small">s</span>
@@ -53,7 +55,7 @@ function ProductDetail(props){
 							<span class="color blue"></span>
 						</h5> */}
 						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">add to cart</button>
+							<button class="add-to-cart btn btn-default" type="button" onClick={()=>addItem(el)}>add to cart</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>
@@ -62,5 +64,9 @@ function ProductDetail(props){
 		</div>
 	</div>
 }
-	export default ProductDetail
-	
+
+const mapDispatchToProps = dispatch => ({
+	addItem: (payload) => dispatch(addItem(payload))
+})
+export default connect(null, mapDispatchToProps)(ProductDetail)
+

@@ -1,6 +1,7 @@
 
 .new-feed{
     display:flex;
+    font-size:16px;
     
     background: #efefec;
   }
@@ -11,11 +12,13 @@
   .new-feed-text {
     background: #424242;
       padding: 1px 60px 0 20px;
+      
       display: inline-block;
       position: relative;
       color:white;
   }
   .new-feed p{
+   
     margin: 1px 
   }
   .new-feed-text:before {

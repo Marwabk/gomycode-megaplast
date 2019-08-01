@@ -7,7 +7,7 @@ export default function DescriptionSalon (props) {
    const article=salonDeThe.filter(el=>el.ref===props.refs)
         return (<div>
             
-            {article.map(el=><ProductDetail tit={el.title} img={el.imgUrl} price={el.price} refs={el.ref}/>)}
+            {article.map(el=><ProductDetail el = {el} refs={el.ref}/>)}
             </div>)
     
 }

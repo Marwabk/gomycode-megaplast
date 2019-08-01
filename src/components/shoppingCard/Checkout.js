@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AdressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import CheckIn from './Checkin'
 function MadeWithLove() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -64,10 +65,12 @@ const steps = ['Shipping address', 'Payment details', 'Review your order'];
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <AddressForm />;
+      return <CheckIn />;
     case 1:
-      return <PaymentForm />;
+       return <AddressForm />;
     case 2:
+      return <PaymentForm />;
+    case 3:
       return <Review />;
     default:
       throw new Error('Unknown step');
