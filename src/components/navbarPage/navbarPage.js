@@ -30,9 +30,9 @@ render() {
                 <div className="d-none d-md-inline navbar-item">Catégorie</div>
               </MDBDropdownToggle>
               <MDBDropdownMenu className="dropdown-default" >
-                <MDBDropdownItem href="/cuisine">Article Cuisine</MDBDropdownItem>
-                <MDBDropdownItem href="/jardin">Article Jardin</MDBDropdownItem>
-                <MDBDropdownItem href="/salon">Salon de the</MDBDropdownItem>
+              <Link to="/cuisine" className="navbar-item"><MDBDropdownItem >Article Cuisine</MDBDropdownItem></Link>
+              <Link to="/jardin" className="navbar-item"><MDBDropdownItem >Article Jardin</MDBDropdownItem></Link>
+              <Link to="/salon" className="navbar-item"><MDBDropdownItem >Salon de thé</MDBDropdownItem></Link>
               </MDBDropdownMenu>
             </MDBDropdown>
           <MDBNavItem>

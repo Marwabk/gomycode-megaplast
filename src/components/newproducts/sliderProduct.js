@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import ItemCard from '../ItemCard'
+import ItemCard from '../../pages/ItemCard'
 import './SliderProducts.css'
 import { Router,Link } from "@reach/router";
 
