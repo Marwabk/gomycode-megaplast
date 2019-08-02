@@ -25,9 +25,9 @@ export default class MultipleItems extends Component {
       <div className='slider-products'>
         <Link to={path} className="new-article"> {title} </Link>
         {articles.length===6?<Slider {...settings}>
-         {articles.map(el=><ItemCard el={el} />) }
+         {articles.map(el=><ItemCard el={el} article={el}/>) }
          
-        </Slider>:articles.map(el=><ItemCard el={el} />) }
+        </Slider>:articles.map(el=><ItemCard el={el} article={el}/>) }
       </div>
     );
   }

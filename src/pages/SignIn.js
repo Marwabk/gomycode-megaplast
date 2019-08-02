@@ -61,7 +61,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Connectez-vous
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -70,7 +70,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Email "
             name="email"
             autoComplete="email"
             type="email"
@@ -82,14 +82,14 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="Mot de passe"
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label="Se souvenir de moi"
           />
           <Button
             type="submit"
@@ -103,12 +103,12 @@ export default function SignIn() {
           <Grid container>
             <Grid item xs>
               <Link to="#" variant="body2">
-                Forgot password?
+                Mot de passe oublié?
               </Link>
             </Grid>
             <Grid item>
               <Link to="/register" variant="body2">
-                {"Don't have an account? Sign Up"}
+                {"Pas de compte?Inscrivez-vous"}
               </Link>
             </Grid>
           </Grid>

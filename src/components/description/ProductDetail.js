@@ -2,12 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addItem } from '../../actions'
 import './ProductDetail.css'
-
+import '../../App/App.css'
 
 
 class ProductDetail extends React.Component {
 	state = {
-		quantity: 0
+		quantity: 1
 	} 
 	render() {
 		const {el, addItem, article} = this.props;
@@ -28,7 +28,8 @@ class ProductDetail extends React.Component {
 						<div class="action">
 							<button class="add-to-cart btn btn-default" type="button" onClick={()=>addItem({article, quantity:this.state.quantity})}>add to cart</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-							<input onChange={(event) => this.setState({ quantity: event.target.value})} type="text"></input>
+							<p>Qté</p>
+							<input className="qty" onChange={(event) => this.setState({ quantity: event.target.value})} type="text"></input>
 						</div>
 						
 					</div>

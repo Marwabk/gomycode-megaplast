@@ -4,7 +4,7 @@ import ProductDetail from '../components/description/ProductDetail'
 
 
 export default function Description (props) {
-
+        
         return (<div>
             
             

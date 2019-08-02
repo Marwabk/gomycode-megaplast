@@ -22,10 +22,10 @@ function CheckIn(props) {
                     <p>Prix unitaire:{el.article.price}</p>
                     <p>Prix total:{Number(el.article.price)*Number(el.quantity)}</p>
                 </div>
-                <div>
+                {/* <div>
                     <p></p>
                     {/* <input type="text"></input> */}
-                </div>
+                {/* </div> */} 
             </div>)}
         </diV>
     )

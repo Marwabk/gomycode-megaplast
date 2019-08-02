@@ -39,7 +39,7 @@ export const articlesDeJardin=[{imgUrl:'http://www.sotufab-plast.tn/image/data/p
 
 export const salonDeThe=[{imgUrl:'http://www.sotufab-plast.tn/image/data/produits/salon-the/salon%20carthage/DIVAN2%20NOIR.png',title:'Divan noir',ref:'ST100',price:'80',link:'/ST100'},
 {imgUrl:'http://www.sotufab-plast.tn/image/data/produits/salon-the/salon%20carthage/montage-carthage.jpg',title:'salon carthage',ref:'SC100',price:'240',link:'/SC100'},
-{imgUrl:'http://www.sotufab-plast.tn/image/data/produits/salon-the/salon%20carthage/TABLE%20GRIS.png',title:'table carthage',ref:'TC100',price:'85',link:'/TC100'},
+{imgUrl:'http://www.sotufab-plast.tn/image/data/produits/salon-the/salon%20carthage/TABLE%20GRIS.png',title:'table carthage',ref:'TC101',price:'85',link:'/TC101'},
 {imgUrl:'',title:'',ref:'',price:'',link:'/'},
 {imgUrl:'',title:'',ref:'',price:'',link:'/'},
 {imgUrl:'',title:'',ref:'',price:'',link:'/'},

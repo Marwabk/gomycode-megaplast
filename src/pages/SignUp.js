@@ -60,7 +60,7 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Inscrivez-vous
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -72,7 +72,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Nom"
                 autoFocus
               />
             </Grid>
@@ -82,7 +82,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label="Prénom"
                 name="lastName"
                 autoComplete="lname"
               />
@@ -93,7 +93,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Email "
                 name="email"
                 autoComplete="email"
               />
@@ -104,7 +104,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Mot de passe"
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -124,12 +124,12 @@ export default function SignUp() {
             color="primary"
             className={classes.submit}
           >
-            Sign Up
+            Inscrivez-vous
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
               <Link to="/signIn" variant="body2">
-                Already have an account? Sign in
+                Avez-vous déjà un compte? Connectez-vous
               </Link>
             </Grid>
           </Grid>
